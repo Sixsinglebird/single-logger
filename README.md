@@ -1,7 +1,7 @@
 # single-logger
 example usage
 
-`// imports
+### `// imports
 const logger = require("single-logger");
 
 
