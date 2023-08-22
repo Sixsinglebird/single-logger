@@ -1,0 +1,29 @@
+{
+  "name": "single-logger",
+  "version": "1.0.0",
+  "description": "A simple function to log single url requests to a server.",
+  "main": "logger.js",
+  "scripts": {
+    "test": "null"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sixsinglebird/single-logger.git"
+  },
+  "keywords": [
+    "logger",
+    "logging",
+    "url-request-logging",
+    "http",
+    "http-logging",
+    "server-logs",
+    "server-logging",
+    "server-info"
+  ],
+  "author": "A. Singleton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sixsinglebird/single-logger/issues"
+  },
+  "homepage": "https://github.com/Sixsinglebird/single-logger#readme"
+}
