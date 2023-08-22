@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Single Logger
 
 **single-logger** is a lightweight Node.js logging utility designed to provide simple event logging capabilities. It helps you manage logs in a structured manner and facilitates easy integration into your Node.js applications.
@@ -79,3 +80,27 @@ This project is developed under the [MIT License](https://opensource.org/license
 # About
 
 **single-logger** is developed and maintained by [A. Singleton](https://www.linkedin.com/in/alexander-francis-singleton/)
+=======
+# single-logger
+### example usage
+
+const logger = require("single-logger");
+
+const events = require("events");
+
+class Event extends events {}
+
+const emitEvent = new Event();
+
+app.get("/", async (req, res) => {
+  emitEvent.emit("log", "app", `GET`, req.url);
+  // code to response to the request
+});
+
+app.listen(PORT);
+
+emitEvent.on("log", (event, level, message) => {
+    logger.logEvent(event, level, message);
+});
+
+>>>>>>> f71dcb3c9e9a0cd7a1b7ca98c412448c85bb9945
