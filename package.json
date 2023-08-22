@@ -1,6 +1,6 @@
 {
   "name": "single-logger",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple function to log single url requests to a server.",
   "main": "logger.js",
   "scripts": {
@@ -25,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/Sixsinglebird/single-logger/issues"
   },
-  "homepage": "https://github.com/Sixsinglebird/single-logger#readme"
+  "homepage": "https://github.com/Sixsinglebird/single-logger#readme",
+  "dependencies": {
+    "date-fns": "^2.30.0",
+    "uuid": "^9.0.0"
+  }
 }
