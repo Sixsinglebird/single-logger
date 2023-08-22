@@ -19,7 +19,7 @@ const logEvent = async (event, level, message) => {
   if (DEBUG) console.log(logItem);
   try {
     const logDir =
-      "logs/" + getYear(new Date()) + "/" + getMonth(new Date()) + "/";
+      "../../logs/" + getYear(new Date()) + "/" + getMonth(new Date()) + "/";
     if (!fs.existsSync(path.join(__dirname, logDir))) {
       // this is fun... without the method {recursive: true }
       //  mkdir will not create nested loops
