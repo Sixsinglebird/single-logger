@@ -1,6 +1,6 @@
 {
   "name": "single-logger",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A simple function to log single url requests to a server.",
   "main": "logger.js",
   "scripts": {
