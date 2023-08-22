@@ -19,19 +19,16 @@ const logEvent = async (event, level, message) => {
   // if (DEBUG) console.log(logItem);
   try {
     const logDir =
-      "../../logs/" + getYear(new Date()) + "/" + getMonth(new Date()) + "/";
-    if (!fs.existsSync(path.join(__dirname, logDir))) {
+      "./logs/" + getYear(new Date()) + "/" + getMonth(new Date()) + "/";
+    if (!fs.existsSync(logDir)) {
       // this is fun... without the method {recursive: true }
       //  mkdir will not create nested loops
       // if (DEBUG) console.log("Directory made");
-      await promise.mkdir(path.join(__dirname, logDir), { recursive: true });
+      await promise.mkdir(logDir, { recursive: true });
       emitEvent.emit("log", "logger", "WARNING", "New Directory Made.");
     }
     const file = `${format(new Date(), "dd")}_http_events.log`;
-    await promise.appendFile(
-      path.join(__dirname, logDir, file),
-      logItem + "\n"
-    );
+    promise.appendFile(path.join(logDir, file), logItem + "\n");
   } catch (err) {
     console.log(err);
   }
