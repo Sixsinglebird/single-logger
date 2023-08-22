@@ -1,7 +1,7 @@
 # single-logger
 example usage
-`////////////////////////////////////////////////
-// imports
+
+`// imports
 const logger = require("single-logger");
 
 
@@ -20,4 +20,5 @@ app.listen(PORT);
 // logger
 emitEvent.on("log", (event, level, message) => {
     logger.logEvent(event, level, message);
-});`
+});
+`
