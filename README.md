@@ -1,5 +1,5 @@
 # single-logger
-example usage
+### example usage
 
 const logger = require("single-logger");
 const events = require("events");
