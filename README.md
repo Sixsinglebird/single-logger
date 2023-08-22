@@ -1,17 +1,20 @@
 # single-logger
 example usage
 
-`const logger = require("single-logger");`
-`app.get("/", async (req, res) => {`
-`  emitEvent.emit("log", "app", `GET`, req.url);`
-`  // code to response to the request`
-`});`
+// imports
+const logger = require("single-logger");
 
-`// listener`
-`app.listen(3000);`
+// app routes
+app.get("/", async (req, res) => {
+  emitEvent.emit("log", "app", `GET`, req.url);
+  // code to response to the request
+});
 
-`// logger`
-`emitEvent.on("log", (event, level, message) => {`
-`    logger.logEvent(event, level, message);`
-`});`
+// listener
+app.listen(PORT);
+
+// logger
+emitEvent.on("log", (event, level, message) => {
+    logger.logEvent(event, level, message);
+});
 
