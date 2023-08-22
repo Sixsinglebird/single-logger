@@ -25,7 +25,7 @@ const logEvent = async (event, level, message) => {
       //  mkdir will not create nested loops
       if (DEBUG) console.log("Directory made");
       await promise.mkdir(path.join(__dirname, logDir), { recursive: true });
-      emitEvent.emit("log", "router", "WARNING", "New Directory Made.");
+      emitEvent.emit("log", "logger", "WARNING", "New Directory Made.");
     }
     const file = `${format(new Date(), "dd")}_http_events.log`;
     await promise.appendFile(
